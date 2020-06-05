@@ -1,9 +1,9 @@
 # WIP
-WIP repository for creating a memory tool! 
+WIP repository for creating a memory CLI tool! 
 Can be used if people wanna try playing around.
 
 # Overview
-The goal of this tool is to provide two simple commands
+The goal of this tool is to provide two simple command line commands
 
 ## remember
 `memorize remember key value` command can be used for saving key value pairs in your system.

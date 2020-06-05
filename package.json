@@ -3,9 +3,6 @@
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
   "bin": {
     "memorify": "./index.js"
   },
