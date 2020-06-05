@@ -1,10 +1,8 @@
-const homeDir = require('os').homedir();
-const fs = require('fs')
-const {folder, dataFile} = require('./constants');
-const appFolder = [homeDir, folder].join("/");
-const memoryFile = [appFolder, dataFile].join("/");
 
-module.exports.checkOrCreateMemoryFile = function() {
+const fs = require('fs')
+const readline = require('readline');
+
+module.exports.checkOrCreateMemoryFile = function(appFolder, memoryFile) {
 try {
 fs.accessSync(appFolder);
 
@@ -21,4 +19,19 @@ fs.accessSync(memoryFile);
     fs.close()
 }
 
+}
+
+module.exports.remind = function(memoryFile, keyItem) {
+    const fileStream = fs.createReadStream(memoryFile);
+    const rl = readline.createInterface({
+        input: fileStream,
+        crlfDelay: Infinity
+      });
+    
+      rl.on('line', (line) => {
+        [key, value] = line.split(",");
+        if (key==keyItem) {
+            console.log(value);
+        }
+      });
 }

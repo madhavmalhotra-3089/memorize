@@ -19,7 +19,7 @@ const allowedCommands = {
     }
 }
 
-helpers.checkOrCreateMemoryFile();
+helpers.checkOrCreateMemoryFile(appFolder, memoryFile);
 const commandArgs = process.argv.slice(2);
 const command = commandArgs[0].toUpperCase();
 
@@ -53,6 +53,14 @@ switch(command) {
     
     case allowedCommands.REMIND.string:
         console.log("You want to be reminded of something");
+        const keyItem = commandArgs[1];
+        if (!keyItem) {
+            console.log("Please provide information item to be found!");
+        }
+
+        helpers.remind(memoryFile, keyItem);
+
+
         break;
     
 }
