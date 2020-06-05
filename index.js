@@ -24,22 +24,22 @@ const commandArgs = process.argv.slice(2);
 const command = commandArgs[0].toUpperCase();
 
 if(!allowedCommands[command]){
-    console.log(`Supplied command ${command} not allowed`);
+    console.error(`Supplied command ${command} not allowed`);
 }
 
 switch(command) {
     case allowedCommands.REMEMBER.string:
-        console.log("You want me to remember something");
+        console.error("You want me to remember something");
         const key = commandArgs[1];
         const value = commandArgs[2];
 
         if (!key) {
-            console.log("Please provide information item to be saved");
+            console.error("Please provide information item to be saved");
             return;
         }
 
         if(!value) {
-            console.log("Please provide the information to be saved");
+            console.error("Please provide the information to be saved");
             return;
         }
 
@@ -52,10 +52,9 @@ switch(command) {
         break;
     
     case allowedCommands.REMIND.string:
-        console.log("You want to be reminded of something");
         const keyItem = commandArgs[1];
         if (!keyItem) {
-            console.log("Please provide information item to be found!");
+            console.error("Please provide information item to be found!");
         }
 
         helpers.remind(memoryFile, keyItem);
