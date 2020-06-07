@@ -21,6 +21,10 @@ const allowedCommands = {
 
 helpers.checkOrCreateMemoryFile(appFolder, memoryFile);
 const commandArgs = process.argv.slice(2);
+if(commandArgs.length===0){
+    helpers.showHelp()
+    return 0
+}
 const command = commandArgs[0].toUpperCase();
 
 if(!allowedCommands[command]){
