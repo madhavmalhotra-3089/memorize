@@ -1,11 +1,6 @@
-# WIP
-
-WIP repository for creating a memory CLI tool!
-Can be used if people wanna try playing around.
-
 # Overview
 
-The goal of this tool is to provide two simple command line commands
+The goal of this tool is to provide simple command line tool for saving information and retrieving information.
 
 ## set
 
@@ -18,3 +13,6 @@ The goal of this tool is to provide two simple command line commands
 # Installation
 
 `npm install memorify`
+
+# Available commands
+Available commands can be accessed via `memorify --help`
