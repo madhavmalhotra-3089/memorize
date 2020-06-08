@@ -8,5 +8,5 @@ exports.handler = (argv) => {
   if (!keyItem) {
     console.error("Please provide information item to be found!");
   }
-  helpers.remind(memoryFile, keyItem);
+  helpers.get(memoryFile, keyItem);
 };

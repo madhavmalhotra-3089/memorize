@@ -18,7 +18,7 @@ module.exports.checkOrCreateMemoryFile = function (appFolder, memoryFile) {
   }
 };
 
-module.exports.remind = function (memoryFile, keyItem) {
+module.exports.get = function (memoryFile, keyItem) {
   const fileStream = fs.createReadStream(memoryFile);
   const rl = readline.createInterface({
     input: fileStream,
