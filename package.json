@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/design2soft/memorize/issues"
   },
-  "homepage": "https://github.com/design2soft/memorize#readme"
+  "homepage": "https://github.com/design2soft/memorize#readme",
+  "dependencies": {
+    "yargs": "^15.3.1"
+  }
 }
