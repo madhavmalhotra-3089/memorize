@@ -14,7 +14,6 @@ module.exports.checkOrCreateMemoryFile = function (appFolder, memoryFile) {
   } catch (err) {
     console.log("Data file does not exist");
     fs.openSync(memoryFile, fs.constants.O_CREAT);
-    fs.close();
   }
 };
 
