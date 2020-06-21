@@ -2,7 +2,7 @@ const helpers = require("../helper");
 const { memoryFile, EOL } = require("../constants");
 const fs = require("fs");
 
-(exports.command = "set [key] [value]"), "Set some information.";
+exports.command = "set [key] [value]"
 exports.describe = "Set value for a particular key";
 exports.handler = (argv) => {
   console.log("You want me to remember something");
