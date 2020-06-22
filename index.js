@@ -6,12 +6,6 @@ const { appFolder, memoryFile } = require("./constants");
 helpers.checkOrCreateMemoryFile(appFolder, memoryFile);
 const commandArgs = process.argv.slice(2);
 
-if (commandArgs.length === 0) {
-  yargs.showHelp();
-  return 0;
-}
-
-yargs
-  .command(require("./commands/get"))
-  .command(require("./commands/set"))
+yargs 
+.commandDir('./commands').demandCommand(1, "You need to pass a command!")
   .help().argv;

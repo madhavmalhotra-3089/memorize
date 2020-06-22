@@ -32,11 +32,3 @@ module.exports.get = function (memoryFile, keyItem) {
   });
 };
 
-module.exports.showHelp = () => {
-  console.log(
-    "\n\n\t\tmemorify - A simple CLI tool to save key-value pair on disk"
-  );
-  console.log("\n\t\t COMMANDS AVAILABLE:");
-  console.log("\n\t\t> memorify remember [key] [value]");
-  console.log("\n\t\t> memorify remind [key] ");
-};
